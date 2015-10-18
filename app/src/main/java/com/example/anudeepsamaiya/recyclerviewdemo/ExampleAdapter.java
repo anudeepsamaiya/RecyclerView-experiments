@@ -33,7 +33,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ItemView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dataset.size();
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
