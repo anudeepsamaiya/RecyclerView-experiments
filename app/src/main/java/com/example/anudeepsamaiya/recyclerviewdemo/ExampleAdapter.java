@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ItemView
 
     @Override
     public void onBindViewHolder(ItemViewHolder holder, int position) {
-
+        holder.tvTitle.setText(dataset.get(position));
     }
 
     @Override
@@ -36,8 +37,10 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ItemView
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
+        TextView tvTitle;
         public ItemViewHolder(View itemView) {
             super(itemView);
+            tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
         }
     }
 }
