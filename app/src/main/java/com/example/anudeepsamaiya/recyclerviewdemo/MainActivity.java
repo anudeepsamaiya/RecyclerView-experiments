@@ -1,7 +1,7 @@
 package com.example.anudeepsamaiya.recyclerviewdemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupRecyclerView() {
         recyclerView = (RecyclerView) findViewById(R.id.rv_example);
         rvLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        rvAdapter = new ExampleAdapter(this, exampleDataset);
+        rvAdapter = new ButterKnightFragment.ExampleAdapter(this, exampleDataset);
 
         recyclerView.setLayoutManager(rvLayoutManager);
         recyclerView.setAdapter(rvAdapter);
