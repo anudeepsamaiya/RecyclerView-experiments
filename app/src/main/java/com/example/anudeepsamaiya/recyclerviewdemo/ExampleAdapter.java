@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by AnudeepSamaiya on 18-10-2015.
  */
@@ -37,10 +40,12 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ItemView
     }
 
     public class ItemViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.tv_title)
         TextView tvTitle;
         public ItemViewHolder(View itemView) {
             super(itemView);
-            tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
+            ButterKnife.bind(this, itemView);
+            //tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
         }
     }
 }
